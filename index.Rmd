@@ -1,0 +1,330 @@
+---
+title       : "High throughput sequencing"
+subtitle    : "BSX-3139 Molecular Ecology and Evolution"
+author      : Dr Axel Barlow
+job         : "email: a.barlow.@bangor.ac.uk"
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : zenburn      # {zenburn, tomorrow, solarized-dark, ...}
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {selfcontained, standalone, draft}
+knit        : slidify::knit2slides
+logo        : LA_Full_colour_reversed.svg
+biglogo     : A1_FullColour.svg
+assets      : {assets: ../../assets}
+license     : by-nc-sa
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(RColorBrewer)
+library(knitr)
+```
+
+<!-- adding bold and italic options -->
+<style>
+em {
+  font-style: italic
+}
+strong {
+  font-weight: bold;
+}
+</style>
+
+## High throughput sequencing
+
+- First generation sequencing (Sanger)
+- Second generation sequencing (Illumina)
+- Third generation sequencing (PacBio and Oxford Nanopore)
+
+---
+
+## High throughput sequencing
+
+```{r, out.width = "95%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/sequencers.svg")
+```
+
+---
+
+## High throughput sequencing
+
+```{r, out.width = "95%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/2021_Sequencing_cost_per_Mb.jpg")
+```
+
+--- .segue .dark 
+
+## First generation sequencing
+
+--- bg:white
+
+## Sanger sequencing
+
+```{r, out.width = "60%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/sanger_gel.svg")
+```
+
+--- bg:white
+
+## Sanger sequencing
+
+```{r, out.width = "60%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/sanger_auto.svg")
+```
+
+--- &twocol
+
+## Sanger overview
+
+*** =left
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/abi_3130.svg")
+```
+
+*** =right
+
+- 700-1000 bp
+- High accuracy
+- 384 samples
+- 1 day
+- Dominated for 3 decades
+
+--- .segue .dark 
+
+## Second generation sequencing
+
+---
+
+## Illumina
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/illumina.svg")
+```
+
+---
+
+## Data output
+
+Platform | Million reads | Read length | Gb data | Genome coverage
+---|---|---|---|---
+MiniSeq|25|2 x 150 bp|7.5|2
+MiSeq|25|2 x 300 bp|15|4
+NextSeq|400|2 x 150 bp|120|33
+HiSeq X|6000|2 x 150 bp|1800|500
+NovaSeq|20000|2 x 150 bp|6000|1667
+
+---
+
+## Sequencing by synthesis
+
+1. Sample preparation
+2. Bind DNA to flowcell, generate clusters
+3. Sequencing by synthesis
+4. Data analysis (in the machine)
+
+---
+
+## Sample preparation
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/library_molecule.svg")
+```
+
+*Indexes allow multiple samples to be sequenced at the same time
+
+---
+
+## Flow cell
+
+```{r, out.width = "80%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/flowcell.svg")
+```
+
+--- bg:white
+
+## Cluster generation
+
+```{r, out.width = "70%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/cluster.svg")
+```
+
+--- bg:white
+
+## Sequencing by synthesis
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/sbs.svg")
+```
+
+--- bg:white
+
+## Data analysis (in the machine)
+
+```{r, out.width = "85%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/dataanalysis.svg")
+```
+
+---
+
+## What do we sequence?
+
+[Not an exhaustive list]
+
+- **Whole genome sequencing (pure DNA sample from a single individual)**
+- Reduced representation genome data (RADseq, targeted SNPs, single individual)
+- Poolseq (multiple individuals)
+- Transcriptome (RNA sample from single tissue/individual)
+- Metabarcoding (PCR amplicon, multiple individuals/species)
+- Metagenomics (whole genomes, multiple individuals/species)
+
+---
+
+## Whole genome sequencing
+
+Short reads from a single individual can be mapped to a reference genome assembly
+
+```{r, out.width = "95%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/pseudohap.svg")
+```
+
+---
+
+## Whole genome sequencing
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "left"}
+  include_graphics("./assets/img/Screenshot from 2022-09-08 13-58-44.png")
+```
+
+---
+
+## Example: leopard population genomics
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "left"}
+  include_graphics("./assets/img/leopar_res.svg")
+```
+
+*Paijmans et al. 2021. Current Biology*
+
+---
+
+## Illumina summary
+
+- The current market leader
+- Massive output
+- Many applications (genome resequencing, RADseq, transcriptomes, metabarcoding)
+- Cheap (£10 per Gb)
+- Major limitation is the read length
+
+--- .segue .dark 
+
+## Third generation sequencing
+
+---
+
+## PacBio
+
+```{r, out.width = "50%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/sequel-2Bimage.jpg")
+```
+
+--- bg:white
+
+## Single Molecule, Real-Time (SMRT) sequencing
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/smrt_seq.svg")
+```
+
+--- 
+
+## HiFi reads
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "center"}
+  include_graphics("./assets/img/HiFi-reads-img.svg")
+```
+
+---
+
+## PacBio summary
+
+- Single molecule sequencing (no cluster generation)
+- Long reads (up to 50 kb)
+- Fantastic for **genome assemblies**
+- Historically high sequencing error, solved by HiFi sequencing
+
+---
+
+## What can we do with the data?
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "left"}
+  include_graphics("./assets/img/41586_2018_Article_BFnature25458_Fig1_HTML.webp")
+```
+
+*Nowoshilow et al. 2018. Nature*
+
+---
+
+## Oxford Nanopore
+
+```{r, out.width = "100%", dpi = 300, echo = FALSE, fig.align = "left"}
+  include_graphics("./assets/img/Oxford Nanopore devices.png")
+```
+
+--- bg:white
+
+## How it works
+
+```{r, out.width = "90%", dpi = 300, echo = FALSE, fig.align = "left"}
+  include_graphics("./assets/img/ont-sequencing_yourgenome.png")
+```
+
+---
+
+## Field based sequencing
+
+```{r, out.width = "65%", dpi = 300, echo = FALSE, fig.align = "left"}
+  include_graphics("./assets/img/41586_2016_Article_BFnature16996_Fig1_HTML.webp")
+```
+
+*Quick et al. 2016. Real-time, portable genome sequencing for Ebola surveillance. Nature*
+
+---
+
+## Oxford Nanopore summary
+
+- Variable output, up to Tb's with larger platforms
+- Long reads, record is 2.3 Mb!
+- High error rate, currently 5-10 % but improving
+- Portability and real time sequencing/analysis
+
+---
+
+## Recommended reading
+
+```{r, out.width = "100%", out.height=500, dpi = 300, echo = FALSE}
+include_graphics("./assets/img/Illumina Inc - 2013 - Illumina Sequencing Technology - YouTube.pdf")
+```
+
+---
+
+## Recommended reading
+
+```{r, out.width = "100%", out.height=500, dpi = 300, echo = FALSE}
+include_graphics("./assets/img/Hu et al. - 2021 - Next-generation sequencing technologies An overview.pdf")
+```
+
+---
+
+## Recommended reading
+
+```{r, out.width = "100%", out.height=500, dpi = 300, echo = FALSE}
+include_graphics("./assets/img/Athanasopoulou et al. - 2022 - Third-Generation Sequencing The Spearhead towards the Radical Transformation of Modern Genomics.pdf")
+```
+
+--- &thankyou
+
+## Next time:
+
+**Gene trees and molecular dating**
