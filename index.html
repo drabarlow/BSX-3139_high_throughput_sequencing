@@ -223,48 +223,59 @@ strong {
     <table><thead>
 <tr>
 <th>Platform</th>
-<th>Million reads</th>
+<th>read pairs</th>
 <th>Read length</th>
-<th>Gb data</th>
+<th>data output</th>
 <th>Genome coverage</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>MiniSeq</td>
-<td>25</td>
+<td>25 million</td>
 <td>2 x 150 bp</td>
-<td>7.5</td>
-<td>2</td>
+<td>7.5 Gb</td>
+<td>2 x</td>
 </tr>
 <tr>
 <td>MiSeq</td>
-<td>25</td>
+<td>25 million</td>
 <td>2 x 300 bp</td>
-<td>15</td>
-<td>4</td>
+<td>15 Gb</td>
+<td>4 x</td>
 </tr>
 <tr>
-<td>NextSeq</td>
-<td>400</td>
+<td>NextSeq 550</td>
+<td>400 million</td>
 <td>2 x 150 bp</td>
-<td>120</td>
-<td>33</td>
+<td>120 Gb</td>
+<td>33 x</td>
+</tr>
+<tr>
+<td>NextSeq 2000</td>
+<td>900 million</td>
+<td>2 x 300 bp</td>
+<td>540 Gb</td>
+<td>150 x</td>
 </tr>
 <tr>
 <td>HiSeq X</td>
-<td>6000</td>
+<td>6 billion</td>
 <td>2 x 150 bp</td>
-<td>1800</td>
-<td>500</td>
+<td>1.8 Tb</td>
+<td>500 x</td>
 </tr>
 <tr>
-<td>NovaSeq</td>
-<td>20000</td>
+<td>NovaSeq X Plus</td>
+<td>52 billion</td>
 <td>2 x 150 bp</td>
-<td>6000</td>
-<td>1667</td>
+<td>16 Tb*</td>
+<td>4444 x</td>
 </tr>
 </tbody></table>
+
+<ul>
+<li>*16 Tb = 16,000,000,000,000 bp</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -313,7 +324,7 @@ strong {
   </hgroup>
   
   <article data-timings="">
-    <p><img src="./assets/img/flowcell.svg" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="80%" style="display: block; margin: auto;" /></p>
+    <p><img src="./assets/img/flowcell2.svg" width="100%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -441,8 +452,10 @@ strong {
     <ul>
 <li>The current market leader</li>
 <li>Massive output</li>
+<li><strong>But keep an eye on Ultima Genomics</strong></li>
+<li>High accuracy</li>
 <li>Many applications (genome resequencing, RADseq, transcriptomes, metabarcoding)</li>
-<li>Cheap (£10 per Gb)</li>
+<li>Cheap (£9 per Gb)</li>
 <li>Major limitation is the read length</li>
 </ul>
 
@@ -464,14 +477,14 @@ strong {
   
 </slide>
 
-<slide class="" id="slide-23" style="background:;">
+<slide class="" id="slide-23" style="background:white;">
   
   <hgroup>
     <h2>PacBio</h2>
   </hgroup>
   
   <article data-timings="">
-    <p><img src="./assets/img/sequel-2Bimage.jpg" alt="plot of chunk unnamed-chunk-15" width="50%" style="display: block; margin: auto;" /></p>
+    <p><img src="./assets/img/revio_right_closed.jpg" width="100%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -515,9 +528,12 @@ strong {
   <article data-timings="">
     <ul>
 <li>Single molecule sequencing (no cluster generation)</li>
-<li>Long reads (up to 50 kb)</li>
+<li>Long reads (around 25 kb)</li>
+<li>75 Gb per SMRT Cell for Revio</li>
 <li>Fantastic for <strong>genome assemblies</strong></li>
 <li>Historically high sequencing error, solved by HiFi sequencing</li>
+<li>Still more expensive than Illumina (~£3k per SMRT cell with library prep) </li>
+<li>Price falling rapidly</li>
 </ul>
 
   </article>
@@ -548,7 +564,7 @@ strong {
   </hgroup>
   
   <article data-timings="">
-    <p><img src="./assets/img/Oxford Nanopore devices.png" alt="plot of chunk unnamed-chunk-19" width="100%" style="display: block; margin: auto auto auto 0;" /></p>
+    <p><img src="./assets/img/nanopore.svg" width="100%" style="display: block; margin: auto auto auto 0;" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -595,8 +611,11 @@ strong {
     <ul>
 <li>Variable output, up to Tb&#39;s with larger platforms</li>
 <li>Long reads, record is 2.3 Mb!</li>
+<li>Output 20-30 Gb (up to 50 Gb) per Minion flow cell</li>
 <li>High error rate, currently 5-10 % but improving</li>
-<li>Portability and real time sequencing/analysis</li>
+<li>Still more expensive than Illumina and PacBio (~£750 for Minion flow cell and library prep)</li>
+<li>True portability and real time sequencing/analysis</li>
+<li>But need to buy sequencer: Minion £4,650 inc. 5 flow cells</li>
 </ul>
 
   </article>

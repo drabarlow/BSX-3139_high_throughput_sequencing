@@ -91,13 +91,16 @@ strong {
 
 ## Data output
 
-Platform | Million reads | Read length | Gb data | Genome coverage
+Platform | read pairs | Read length | data output | Genome coverage
 ---|---|---|---|---
-MiniSeq|25|2 x 150 bp|7.5|2
-MiSeq|25|2 x 300 bp|15|4
-NextSeq|400|2 x 150 bp|120|33
-HiSeq X|6000|2 x 150 bp|1800|500
-NovaSeq|20000|2 x 150 bp|6000|1667
+MiniSeq|25 million|2 x 150 bp|7.5 Gb|2 x
+MiSeq|25 million|2 x 300 bp|15 Gb|4 x
+NextSeq 550|400 million|2 x 150 bp|120 Gb|33 x
+NextSeq 2000|900 million|2 x 300 bp|540 Gb|150 x
+HiSeq X|6 billion|2 x 150 bp|1.8 Tb|500 x
+NovaSeq X Plus|52 billion|2 x 150 bp|16 Tb*|4444 x
+
+- *16 Tb = 16,000,000,000,000 bp
 
 ---
 
@@ -120,7 +123,7 @@ NovaSeq|20000|2 x 150 bp|6000|1667
 
 ## Flow cell
 
-<img src="./assets/img/flowcell.svg" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="80%" style="display: block; margin: auto;" />
+<img src="./assets/img/flowcell2.svg" width="100%" style="display: block; margin: auto;" />
 
 --- bg:white
 
@@ -181,19 +184,21 @@ Short reads from a single individual can be mapped to a reference genome assembl
 
 - The current market leader
 - Massive output
+- **But keep an eye on Ultima Genomics**
+- High accuracy
 - Many applications (genome resequencing, RADseq, transcriptomes, metabarcoding)
-- Cheap (£10 per Gb)
+- Cheap (£9 per Gb)
 - Major limitation is the read length
 
 --- .segue .dark 
 
 ## Third generation sequencing
 
----
+--- bg:white
 
 ## PacBio
 
-<img src="./assets/img/sequel-2Bimage.jpg" alt="plot of chunk unnamed-chunk-15" width="50%" style="display: block; margin: auto;" />
+<img src="./assets/img/revio_right_closed.jpg" width="100%" style="display: block; margin: auto;" />
 
 --- bg:white
 
@@ -212,9 +217,12 @@ Short reads from a single individual can be mapped to a reference genome assembl
 ## PacBio summary
 
 - Single molecule sequencing (no cluster generation)
-- Long reads (up to 50 kb)
+- Long reads (around 25 kb)
+- 75 Gb per SMRT Cell for Revio
 - Fantastic for **genome assemblies**
 - Historically high sequencing error, solved by HiFi sequencing
+- Still more expensive than Illumina (~£3k per SMRT cell with library prep) 
+- Price falling rapidly
 
 ---
 
@@ -228,7 +236,7 @@ Short reads from a single individual can be mapped to a reference genome assembl
 
 ## Oxford Nanopore
 
-<img src="./assets/img/Oxford Nanopore devices.png" alt="plot of chunk unnamed-chunk-19" width="100%" style="display: block; margin: auto auto auto 0;" />
+<img src="./assets/img/nanopore.svg" width="100%" style="display: block; margin: auto auto auto 0;" />
 
 --- bg:white
 
@@ -250,8 +258,11 @@ Short reads from a single individual can be mapped to a reference genome assembl
 
 - Variable output, up to Tb's with larger platforms
 - Long reads, record is 2.3 Mb!
+- Output 20-30 Gb (up to 50 Gb) per Minion flow cell
 - High error rate, currently 5-10 % but improving
-- Portability and real time sequencing/analysis
+- Still more expensive than Illumina and PacBio (~£750 for Minion flow cell and library prep)
+- True portability and real time sequencing/analysis
+- But need to buy sequencer: Minion £4,650 inc. 5 flow cells
 
 ---
 
