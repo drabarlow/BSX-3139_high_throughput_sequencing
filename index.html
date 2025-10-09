@@ -383,7 +383,7 @@ strong {
     <p>[Not an exhaustive list]</p>
 
 <ul>
-<li><strong>Whole genome sequencing (pure DNA sample from a single individual)</strong></li>
+<li><strong>Whole genome resequencing (pure DNA sample from a single individual)</strong></li>
 <li>Reduced representation genome data (RADseq, targeted SNPs, single individual)</li>
 <li>Poolseq (multiple individuals)</li>
 <li>Transcriptome (RNA sample from single tissue/individual)</li>
@@ -399,14 +399,23 @@ strong {
 <slide class="" id="slide-18" style="background:;">
   
   <hgroup>
-    <h2>Whole genome sequencing</h2>
+    <h2>Whole genome resequencing</h2>
   </hgroup>
   
   <article data-timings="">
-    <p>Short reads from a single individual can be mapped to a reference genome assembly</p>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Sequencing reads mapped to an existing <strong>reference genome</strong></li>
+<li>Easy to identify SNPs relative to reference, and to other samples</li>
+<li>Accuracy depends on the number of reads in the stack, termed <strong>depth</strong> or <strong>coverage</strong></li>
+</ul>
 
-<p><img src="./assets/img/pseudohap.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="95%" style="display: block; margin: auto;" /></p>
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/resequencing.svg" width="80%" style="display: block; margin: auto;" /></p>
 
+</div>
   </article>
   <!-- Presenter Notes -->
   
@@ -415,7 +424,7 @@ strong {
 <slide class="" id="slide-19" style="background:;">
   
   <hgroup>
-    <h2>Whole genome sequencing</h2>
+    <h2>Whole genome resequencing</h2>
   </hgroup>
   
   <article data-timings="">
@@ -457,6 +466,7 @@ strong {
 <li>Many applications (genome resequencing, RADseq, transcriptomes, metabarcoding)</li>
 <li>Cheap (£9 per Gb)</li>
 <li>Major limitation is the read length</li>
+<li>Unsuitable for assembly of reference genomes</li>
 </ul>
 
   </article>
@@ -530,7 +540,7 @@ strong {
 <li>Single molecule sequencing (no cluster generation)</li>
 <li>Long reads (around 25 kb)</li>
 <li>75 Gb per SMRT Cell for Revio</li>
-<li>Fantastic for <strong>genome assemblies</strong></li>
+<li>Fantastic for <strong>assembly of reference genomes</strong></li>
 <li>Historically high sequencing error, solved by HiFi sequencing</li>
 <li>Still more expensive than Illumina (~£3k per SMRT cell with library prep) </li>
 <li>Price falling rapidly</li>
@@ -803,14 +813,14 @@ strong {
     
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Whole genome sequencing'>
+        data-slide=18 title='Whole genome resequencing'>
          18
       </a>
     </li>
     
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Whole genome sequencing'>
+        data-slide=19 title='Whole genome resequencing'>
          19
       </a>
     </li>

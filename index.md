@@ -149,24 +149,30 @@ NovaSeq X Plus|52 billion|2 x 150 bp|16 Tb*|4444 x
 
 [Not an exhaustive list]
 
-- **Whole genome sequencing (pure DNA sample from a single individual)**
+- **Whole genome resequencing (pure DNA sample from a single individual)**
 - Reduced representation genome data (RADseq, targeted SNPs, single individual)
 - Poolseq (multiple individuals)
 - Transcriptome (RNA sample from single tissue/individual)
 - Metabarcoding (PCR amplicon, multiple individuals/species)
 - Metagenomics (whole genomes, multiple individuals/species)
 
+--- &twocol
+
+## Whole genome resequencing
+
+*** =left
+
+- Sequencing reads mapped to an existing **reference genome**
+- Easy to identify SNPs relative to reference, and to other samples
+- Accuracy depends on the number of reads in the stack, termed **depth** or **coverage**
+
+*** =right
+
+<img src="./assets/img/resequencing.svg" width="80%" style="display: block; margin: auto;" />
+
 ---
 
-## Whole genome sequencing
-
-Short reads from a single individual can be mapped to a reference genome assembly
-
-<img src="./assets/img/pseudohap.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="95%" style="display: block; margin: auto;" />
-
----
-
-## Whole genome sequencing
+## Whole genome resequencing
 
 <img src="./assets/img/Screenshot from 2022-09-08 13-58-44.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" width="100%" style="display: block; margin: auto auto auto 0;" />
 
@@ -189,6 +195,7 @@ Short reads from a single individual can be mapped to a reference genome assembl
 - Many applications (genome resequencing, RADseq, transcriptomes, metabarcoding)
 - Cheap (£9 per Gb)
 - Major limitation is the read length
+- Unsuitable for assembly of reference genomes
 
 --- .segue .dark 
 
@@ -219,7 +226,7 @@ Short reads from a single individual can be mapped to a reference genome assembl
 - Single molecule sequencing (no cluster generation)
 - Long reads (around 25 kb)
 - 75 Gb per SMRT Cell for Revio
-- Fantastic for **genome assemblies**
+- Fantastic for **assembly of reference genomes**
 - Historically high sequencing error, solved by HiFi sequencing
 - Still more expensive than Illumina (~£3k per SMRT cell with library prep) 
 - Price falling rapidly
